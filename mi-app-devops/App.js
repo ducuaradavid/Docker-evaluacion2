@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, FlatList, ActivityIndicator } from 'react-native';
-=======
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
->>>>>>> main
 
 export default function App() {
   const [datosApi, setDatosApi] = useState([]);
@@ -26,7 +21,6 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
       {/* Encabezado */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Evidencia DevOps y QA</Text>
@@ -51,20 +45,12 @@ export default function App() {
             )}
           />
         )}
-=======
-      <View style={styles.card}>
-        <Text style={styles.warningTitle}>⚠️ Sistema en Mantenimiento</Text>
-        <Text style={styles.warningText}>
-          Estamos realizando mejoras en la plataforma DevOps. Por favor, intenta más tarde.
-        </Text>
->>>>>>> main
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-<<<<<<< HEAD
   container: { flex: 1, backgroundColor: '#f8fafc', paddingTop: 40 },
   header: { backgroundColor: '#1e3a8a', padding: 20, alignItems: 'center' },
   headerTitle: { color: '#ffffff', fontSize: 16, fontWeight: 'bold' },
@@ -85,10 +71,4 @@ const styles = StyleSheet.create({
   },
   cardName: { fontSize: 15, fontWeight: 'bold', color: '#1e293b', marginBottom: 4 },
   cardSub: { fontSize: 13, color: '#64748b', marginTop: 2 }
-=======
-  container: { flex: 1, backgroundColor: '#7f1d1d', justifyContent: 'center', alignItems: 'center', padding: 20 },
-  card: { backgroundColor: '#ffffff', padding: 30, borderRadius: 15, alignItems: 'center', shadowBlur: 10, elevation: 5 },
-  warningTitle: { fontSize: 20, fontWeight: 'bold', color: '#b91c1c', marginBottom: 10, textAlign: 'center' },
-  warningText: { fontSize: 14, color: '#4b5563', textAlign: 'center' }
->>>>>>> main
 });
