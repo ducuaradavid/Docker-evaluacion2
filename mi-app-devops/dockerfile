@@ -1,0 +1,20 @@
+# Usamos una imagen oficial de Node.js estable
+FROM node:20-alpine
+
+# Crear y definir el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar los archivos de empaquetado para instalar dependencias primero (aprovecha la caché de Docker)
+COPY package*.json ./
+
+# Instalar las dependencias del proyecto y la CLI de expo globalmente
+RUN npm install
+
+# Copiar el resto de los archivos de la aplicación
+COPY . .
+
+# Exponer los puertos por defecto que usa Expo para comunicarse
+EXPOSE 8081 19000 19001 19002
+
+# Comando por defecto para iniciar el servidor de desarrollo de Expo
+CMD ["npx", "expo", "start"]
